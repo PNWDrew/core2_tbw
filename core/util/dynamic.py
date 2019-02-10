@@ -36,9 +36,9 @@ class Dynamic:
             v_msg = len(self.msg)
             tx_size = standard_tx + v_msg
             # get T
-            dynamic_offset = self.network['constants'][0]['fees']['dynamicFees']['addonBytes']['transfer']
+            dynamic_offset = self.network['constants'][1]['fees']['dynamicFees']['addonBytes']['transfer']
             # get C
-            fee_multiplier = self.network['constants'][0]['fees']['dynamicFees']['minFeePool']
+            fee_multiplier = self.network['constants'][1]['fees']['dynamicFees']['minFeePool']
             #calculate transaction fee
             transaction_fee = self.calculate_dynamic_fee(dynamic_offset, tx_size, fee_multiplier)
 
